@@ -1,0 +1,8 @@
+<h1>Meal Search</h1>
+
+<%= form_with url: meal_details_path, method: :get, local: true do |form| %>
+  <div>
+    <%= form.text_area :meal_name, placeholder: "Enter meal name", rows: 5, style: "width: 80%;" %>
+  </div>
+  <%= form.submit "Search" %>
+<% end %>

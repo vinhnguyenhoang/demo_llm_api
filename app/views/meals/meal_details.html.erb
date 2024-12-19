@@ -1,0 +1,28 @@
+<h1>Meal Details</h1>
+
+<% if @meal_details.present? %>
+  <% @meal_details.each do |meal| %>
+    <h2><%= meal['strMeal'] %></h2>
+    <img src="<%= meal['strMealThumb'] %>" alt="<%= meal['strMeal'] %>" width="200" />
+    
+    <h4>Ingredients:</h4>
+    <ul>
+      <% (1..10).each do |i| %>
+        <% ingredient = meal["strIngredient#{i}"] %>
+        <% measure = meal["strMeasure#{i}"] %>
+        <% if ingredient.present? %>
+          <li><%= ingredient %> - <%= measure %></li>
+        <% end %>
+      <% end %>
+    </ul>
+
+    <h4>Instructions:</h4>
+    <p><%= meal['strInstructions'] %></p>
+  <% end %>
+<% elsif @message.present? %>
+  <p><%= @message %></p>
+<% else %>
+  <p>No meal details found.</p>
+<% end %>
+
+<%= link_to 'Back to Search', root_path %>

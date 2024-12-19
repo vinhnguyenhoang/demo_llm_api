@@ -1,0 +1,17 @@
+<h1>LLM Text Generator</h1>
+
+<%= form_with url: generate_path, method: :post, local: true do |form| %>
+    <div>
+      <%= form.label :prompt, "Enter your prompt:" %>
+      <%= form.text_area :prompt, rows: 5, style: "width: 100%;" %>
+    </div>
+    <br>
+    <%= form.submit "Generate Text" %>
+<% end %>
+
+# <% if @output.present? %>
+#   <h2>Generated Text:</h2>
+#   <div style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9;">
+#     <%= @output %>
+#   </div>
+# <% end %>
