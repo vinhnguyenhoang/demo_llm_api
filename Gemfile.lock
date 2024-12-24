@@ -108,7 +108,6 @@ GEM
       railties (>= 6.1)
     drb (2.2.1)
     erubi (1.13.0)
-    fuzzy_match (2.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     httparty (0.22.0)
@@ -173,7 +172,7 @@ GEM
     parser (3.3.6.0)
       ast (~> 2.4.1)
       racc
-    pry (0.15.0)
+    pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     psych (5.2.2)
@@ -312,7 +311,6 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
-  fuzzy_match
   httparty
   importmap-rails
   jbuilder
